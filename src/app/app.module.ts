@@ -13,6 +13,8 @@ import { FilmsComponent } from './components/films/films.component';
 import { FilmItemComponent } from './components/film-item/film-item.component';
 import { AddFilmComponent } from './components/add-film/add-film.component';
 import { AboutComponent } from './components/about/about.component';
+import { RoomItemComponent } from './room-item/room-item.component';
+import { RoomsComponent } from './components/rooms/rooms.component';
 
 
 const appRoutes: Routes = [
@@ -31,7 +33,9 @@ const appRoutes: Routes = [
     FilmsComponent,
     FilmItemComponent,
     AddFilmComponent,
-    AboutComponent
+    AboutComponent,
+    RoomItemComponent,
+    RoomsComponent
   ],
   imports: [
     BrowserModule,
