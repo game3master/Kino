@@ -1,0 +1,24 @@
+<!-- <ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <h1>
+    {{ title }}
+  </h1>
+  <li ngbNavItem>
+    <a ngbNavLink>Films</a>
+    <ng-template ngbNavContent>
+      <app-button color='green' text='ADD'></app-button>
+    </ng-template>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink>Rooms</a>
+    <ng-template ngbNavContent>
+      <app-button color='green' text='ADD' (btnClick)="toggleAddFilm"></app-button>
+    </ng-template>
+
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink>Buy Ticket</a>
+    <ng-template ngbNavContent>Rooms</ng-template>
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav"></div> -->
+<app-button color='green' text='ADD' (btnClick)="toggleAddFilm()"></app-button>
