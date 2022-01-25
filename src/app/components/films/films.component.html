@@ -1,7 +1,3 @@
 <app-add-film (onAddFilm)="addFilm($event)"></app-add-film>
-<app-film-item 
-*ngFor="let film of films" 
-[film]="film" 
-(onDeleteFilm)="deleteFilm(film)"
-(onEditFilm)="editFilm(film)">
+<app-film-item *ngFor="let film of films" [film]="film" (onDeleteFilm)="deleteFilm(film)" (onEditFilm)="editFilm($event)">  
 </app-film-item>

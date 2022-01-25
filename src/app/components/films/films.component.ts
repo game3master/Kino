@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FilmService } from '../../services/film.service';
 import { Film } from '../../Film';
-import { FILMS } from '../../mock-films';
 
 @Component({
   selector: 'app-films',
@@ -34,3 +33,4 @@ export class FilmsComponent implements OnInit {
     //this.filmService.addFilm(film).subscribe((film) => this.films.push(film));
   }
 }
+

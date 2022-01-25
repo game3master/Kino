@@ -1,29 +1,29 @@
 {
   "films": [
     {
+      "id": 2,
+      "name": "Shrek 3",
+      "day": "Tuesday",
+      "room": 2,
+      "isAvaiable": true
+    },
+    {
       "id": 1,
-      "name": "SpiderMan",
+      "name": "Spider Man",
       "day": "Monday",
       "room": 2,
       "isAvaiable": true
     },
     {
-      "id": 3,
-      "name": "Atak ludzi grzybów",
-      "day": "Thursday",
-      "room": 2,
+      "id": 4,
+      "name": "Park Jurajski 2",
+      "day": "Friday",
+      "room": "15",
       "isAvaiable": true
     },
     {
-      "name": "Park Jurajski",
-      "day": "Friday",
-      "room": "15",
-      "isAvaiable": true,
-      "id": 4
-    },
-    {
-      "id": 2,
-      "name": "Shrek 3",
+      "id": 3,
+      "name": "Shrek 2",
       "day": "Tuesday",
       "room": 2,
       "isAvaiable": true

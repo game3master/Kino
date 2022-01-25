@@ -13,6 +13,7 @@ export class FilmItemComponent implements OnInit {
   @Input() film: Film;
   @Output() onDeleteFilm: EventEmitter<Film> = new EventEmitter();
   @Output() onEditFilm: EventEmitter<Film> = new EventEmitter();
+
   faTimes = faTimes;
   faPencil = faPencilAlt;
   showEditFilm = false;
@@ -48,13 +49,14 @@ export class FilmItemComponent implements OnInit {
       return;
     }
     const newFilm = {
+      id: film.id,
       name: this.name ?? film.name ,
       day: this.day ?? film.day,
       room: this.room ?? film.room,
-      isAvaiable: this.isAvaiable,
+      isAvaiable: this.isAvaiable ?? film.isAvaiable
     };
 
-    this.onEditFilm.emit(newFilm);
+    this.onEditFilm.emit(newFilm as Film);
 
     this.name = '';
     this.day = '';
