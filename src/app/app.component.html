@@ -26,8 +26,11 @@
   
     </li>
     <li ngbNavItem>
-      <a ngbNavLink>Buy Ticket</a>
-      <ng-template ngbNavContent>Rooms</ng-template>
+      <a ngbNavLink>Show</a>
+      <ng-template ngbNavContent>
+        <app-header></app-header>
+        <app-shows></app-shows>
+      </ng-template>
     </li>
   </ul>
   <div [ngbNavOutlet]="nav">

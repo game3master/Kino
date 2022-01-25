@@ -39,5 +39,24 @@
       "id": 4,
       "space": "540"
     }
+  ],
+  "shows": [
+    {
+      "id": 1,
+      "name": "Shrek 3",
+      "date": "10.03.2022",
+      "hour": "15:00",
+      "room": 3,
+      "ticketSold": 60,
+      "ticket": 120
+    },
+    {
+      "name": "CzlowiekPająk",
+      "date": "30/12/2022",
+      "hour": "15:00",
+      "room": "69",
+      "ticketSold": 23,
+      "id": 2
+    }
   ]
 }

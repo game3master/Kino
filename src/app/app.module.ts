@@ -16,6 +16,9 @@ import { AboutComponent } from './components/about/about.component';
 import { RoomItemComponent } from './components/room-item/room-item.component';
 import { RoomsComponent } from './components/rooms/rooms.component';
 import { AddRoomComponent } from './components/add-room/add-room.component';
+import { ShowsComponent } from './components/shows/shows.component';
+import { ShowItemComponent } from './components/show-item/show-item.component';
+import { AddShowComponent } from './components/add-show/add-show.component';
 
 
 const appRoutes: Routes = [
@@ -37,7 +40,10 @@ const appRoutes: Routes = [
     AboutComponent,
     RoomItemComponent,
     RoomsComponent,
-    AddRoomComponent
+    AddRoomComponent,
+    ShowsComponent,
+    ShowItemComponent,
+    AddShowComponent
   ],
   imports: [
     BrowserModule,
