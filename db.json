@@ -8,16 +8,23 @@
       "isAvaiable": true
     },
     {
-      "id": 2,
-      "name": "Shrek 3",
-      "day": "Tuesday",
+      "id": 3,
+      "name": "Atak ludzi grzybów",
+      "day": "Thursday",
       "room": 2,
       "isAvaiable": true
     },
     {
-      "id": 3,
-      "name": "Atak ludzi grzybów",
-      "day": "Thursday",
+      "name": "Park Jurajski",
+      "day": "Friday",
+      "room": "15",
+      "isAvaiable": true,
+      "id": 4
+    },
+    {
+      "id": 2,
+      "name": "Shrek 3",
+      "day": "Tuesday",
       "room": 2,
       "isAvaiable": true
     }

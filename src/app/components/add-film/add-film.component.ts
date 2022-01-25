@@ -1,13 +1,12 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {Film} from '../../Film'
-import { StringLiteralLike } from 'typescript';
+import { Film } from '../../Film';
 import { Subscription } from 'rxjs';
 import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-add-film',
   templateUrl: './add-film.component.html',
-  styleUrls: ['./add-film.component.css']
+  styleUrls: ['./add-film.component.css'],
 })
 export class AddFilmComponent implements OnInit {
   @Output() onAddFilm: EventEmitter<Film> = new EventEmitter();
@@ -18,17 +17,21 @@ export class AddFilmComponent implements OnInit {
   isAvaiable: boolean;
   showAddFilm: boolean;
   subscription: Subscription;
-  constructor(private uiService: UiService) { this.subscription = this.uiService.onToggle().subscribe((value) => (this.showAddFilm = value)); }
-
-  ngOnInit(): void {
-    
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService
+      .onToggle()
+      .subscribe((value) => (this.showAddFilm = value));
   }
+
+  ngOnInit(): void {}
+
   ngOnDestroy() {
     // Unsubscribe to ensure no memory leaks
     this.subscription.unsubscribe();
-}
+  }
+  
   onSubmit() {
-    if(!this.name){
+    if (!this.name) {
       alert('Please add a name');
       return;
     }
@@ -36,13 +39,13 @@ export class AddFilmComponent implements OnInit {
       name: this.name,
       day: this.day,
       room: this.room,
-      isAvaiable: this.isAvaiable
-    }
+      isAvaiable: this.isAvaiable,
+    };
 
     this.onAddFilm.emit(newFilm);
 
-    this.name = ""; 
-    this.day = "";
+    this.name = '';
+    this.day = '';
     this.room = 0;
     this.isAvaiable = false;
   }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
-import {Film} from '../Film'
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { Film } from '../Film';
 import { HtmlParser } from '@angular/compiler';
 
 const httpOptions = {
@@ -10,13 +10,12 @@ const httpOptions = {
   }),
 };
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FilmService {
+  private apiUrl = 'http://localhost:5000/films';
 
-  private apiUrl = 'http://localhost:5000/films'
-
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getFilms(): Observable<Film[]> {
     return this.http.get<Film[]>(this.apiUrl);
@@ -25,7 +24,7 @@ export class FilmService {
     const url = `${this.apiUrl}/${film.id}`;
     return this.http.delete<Film>(url);
   }
-  addFilm(film: Film): Observable<Film>{
+  addFilm(film: Film): Observable<Film> {
     return this.http.post<Film>(this.apiUrl, film, httpOptions);
   }
 }

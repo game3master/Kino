@@ -1,4 +1,56 @@
-<div class = "film">
-    <h3>{{ film?.name }} <fa-icon (click) = "onDelete(film)" [icon]="faTimes"></fa-icon></h3>
-    <p>{{ film?.day}} </p>
+<div class="film">
+  <h3>
+    {{ film?.name }}
+    <fa-icon (click)="onDelete(film)" [icon]="faTimes"></fa-icon>
+  </h3>
+  <p>
+    {{ film?.day }}
+    <!-- <fa-icon (click)="onEdit(film)" [icon]="faPencil"></fa-icon> -->
+    <fa-icon (click)="toggleEditFilm()" [icon]="faPencil"></fa-icon>
+  </p>
+  <div>
+    <form *ngIf="showEditFilm" class="add-form" (ngSubmit)="onEdit(film)">
+      <div class="form-control">
+        <label for="text"></label>
+        <input
+          type="text"
+          name="Film"
+          [(ngModel)]="name"
+          id="text"
+          placeholder={{film.name}}
+        />
+      </div>
+      <div class="form-control">
+        <label for="day"></label>
+        <input
+          type="text"
+          name="day"
+          [(ngModel)]="day"
+          id="day"
+          placeholder={{film.day}}
+        />
+      </div>
+      <div class="form-control">
+        <label for="text"></label>
+        <input
+          type="text"
+          name="Room"
+          [(ngModel)]="room"
+          id="text"
+          placeholder={{film.room}}
+        />
+      </div>
+      <div class="form-control form-control-check">
+        <label for="isAvaiable">isAvaiable</label>
+        <input
+          type="checkbox"
+          name="isAvaiable"
+          [(ngModel)]="isAvaiable"
+          id="isAvaiable"
+        />
+      </div>
+
+      <input type="submit" value="Save Film" class="btn btn-block" />
+    </form>
+  </div>
 </div>
