@@ -1,1 +1,7 @@
-<p>rooms works!</p>
+<app-add-room (onAddRoom)="addRoom($event)"></app-add-room>
+<app-room-item 
+*ngFor="let room of rooms" 
+[room]="room" 
+(onDeleteFilm)="deleteRoom(room)">
+</app-room-item>
+

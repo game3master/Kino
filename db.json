@@ -22,7 +22,7 @@
       "isAvaiable": true
     }
   ],
-  "rooms":[
+  "rooms": [
     {
       "id": 1,
       "space": 30
@@ -34,7 +34,10 @@
     {
       "id": 3,
       "space": 80
+    },
+    {
+      "id": 4,
+      "space": "540"
     }
-
   ]
 }

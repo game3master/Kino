@@ -13,7 +13,7 @@ export class RoomsComponent implements OnInit {
   constructor(private roomService: RoomService) { }
 
   ngOnInit(): void {
-    this.roomService.getRooms().subscribe((rooms)=> this.rooms);  
+    this.roomService.getRooms().subscribe((rooms)=> this.rooms = rooms);  
   }
   deleteRoom(room: Room){
     this.roomService.deleteRoom(room).subscribe(()=>this.rooms = this.rooms.filter(t => t.id !== room.id));

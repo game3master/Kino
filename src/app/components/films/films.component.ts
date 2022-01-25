@@ -22,4 +22,8 @@ export class FilmsComponent implements OnInit {
   addFilm(film: Film){
     this.filmService.addFilm(film).subscribe((film) => (this.films.push(film)));
   }
+
+  editFilm(film: Film) {
+
+  }
 }

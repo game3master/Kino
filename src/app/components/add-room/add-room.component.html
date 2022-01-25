@@ -1,0 +1,23 @@
+<form *ngIf="showAddRoom" class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="id"></label>
+      <input
+        type="number"
+        name="id"
+        [(ngModel)]="id"
+        id="text"
+        placeholder="Add number of Room"
+      />
+    </div>
+    <div class="form-control">
+      <label for="space"></label>
+      <input
+        type="text"
+        name="space"
+        [(ngModel)]="space"
+        id="day"
+        placeholder="Add space in Room "
+      />
+    </div>
+    <input type="submit" value="Save Room" class="btn btn-block" />
+  </form>
