@@ -1,0 +1,7 @@
+<app-add-show (onAddShow)="addShow($event)"></app-add-show>
+<app-show-item 
+*ngFor="let show of shows" 
+[show]="show" 
+(onDeleteShow)="deleteShow(show)">
+</app-show-item>
+

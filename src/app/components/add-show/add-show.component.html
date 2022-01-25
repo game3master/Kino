@@ -1,0 +1,67 @@
+<form *ngIf="showAddShow" class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="name"></label>
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="name"
+        id="text"
+        placeholder="Add Film"
+      />
+    </div>
+    <div class="form-control">
+      <label for="date"></label>
+      <input
+        type="text"
+        name="date"
+        [(ngModel)]="date"
+        id="day"
+        placeholder="Add Date"
+      />
+    </div>
+    <div class="form-control">
+        <label for="hour"></label>
+        <input
+          type="text"
+          name="hour"
+          [(ngModel)]="hour"
+          id="day"
+          placeholder="Add hour"
+        />
+      </div>
+    <div class="form-control">
+      <label for="text"></label>
+      <input
+        type="text"
+        name="Room"
+        [(ngModel)]="room"
+        id="text"
+        placeholder="Add Room"
+      />
+    </div>
+    <div class="form-control">
+        <label for="ticketSold"></label>
+        <input
+          type="number"
+          name="Room"
+          [(ngModel)]="ticketSold"
+          id="text"
+          placeholder="Add ticketSold"
+        />
+      </div>
+      <div class="form-control">
+        <label for="ticket"></label>
+        <input
+          type="number"
+          name="ticket"
+          [(ngModel)]="ticket"
+          id="day"
+          placeholder="Add ticket"
+        />
+      </div>
+
+    
+    
+    <input type="submit" value="Save Show" class="btn btn-block" />
+  </form>
+  
